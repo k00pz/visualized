@@ -1,0 +1,157 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Visual Blade ball [ Revamped ]",
+   LoadingTitle = "Visual Blade ball",
+   LoadingSubtitle = "by Fsploit",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Arrayfield"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "https://discord.com/invite/DcrzMGKwx2",
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Visual Keysystem",
+      Subtitle = "Key System",
+      Note = "Join the discord (https://discord.com/invite/DcrzMGKwx2)",
+      FileName = "SiriusKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "Visual711"
+   }
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) 
+
+local Section = Tab:CreateSection("Main",true)
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Parry",
+   Info = "Parrys For you.",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Parry/main/auto"))()
+      print(Value)
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Manual Spam",
+   Info = "Spams for you.",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Auto-spam/main/Manual-spam"))()
+      print(Value)
+   end,
+})
+
+local Section = Tab:CreateSection("Misc",true)
+
+local Button = Tab:CreateButton({
+   Name = "Esp radar",
+   Info = "Find your enemys", -- Speaks for itself, Remove if none.
+   Interact = 'Pressable',
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Fsploitrady/main/Hi"))()
+   print('Pressed')
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fly v4 [customized]",
+   Info = "Find your enemys", -- Speaks for itself, Remove if none.
+   Interact = 'Pressable',
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/k00pz/Flying/main/Fly-gui'))()
+   print('Pressed')
+   end,
+})
+
+local Section = Tab:CreateSection("Settings",true)
+
+local Toggle = Tab:CreateToggle({
+   Name = "Rejoin",
+   Info = "Rejoins you .", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+local ts = game:GetService("TeleportService")
+				local p = game:GetService("Players").LocalPlayer
+				ts:Teleport(game.PlaceId, p)
+      print(Value)
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "Walk speed",
+   Info = "changes your walk speed.",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Walk speed",
+   CurrentValue = 10,
+   Flag = "Slider1", 
+   Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(Value)
+      print(Value)
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "Jump power",
+   Info = "Changes your jump power.",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Jump power",
+   CurrentValue = 10,
+   Flag = "Slider1", 
+   Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(Value)
+      print(Value)
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "fov",
+   Info = "Changes your fov.",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Fov",
+   CurrentValue = 10,
+   Flag = "Slider1", 
+   Callback = function(Value)
+local FovNumber = tonumber(Value) --Enter your FOV number here
+local Camera = workspace.CurrentCamera
+Camera.FieldOfView = FovNumber
+      print(Value)
+   end,
+})
+
+local Section = Tab:CreateSection("Info",true)
+
+local Label = Tab:CreateLabel("Pyxpixel Team",SectionParent)
+local Paragraph = Tab:CreateParagraph({Title = "Fsploit", Content = "Creator of the script",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Bl423 or Blaze", Content = "Owner of the script",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Vien", Content = "Owner of Wl and Leaf hub Development team",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Soulzx", Content = "Pyxpixel Development team and a new dev",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Robin1v1", Content = "Pyxpixel Development team",SectionParent})
+
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+Notification:Notify(
+    {Title = "Project V!", Description = "Updated to 0.0.1"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "option"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
+)
+wait(1)
+Notification:Notify(
+    {Title = "Project V!", Description = "Made by Fsploit & Pyxpixel team!"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+)
