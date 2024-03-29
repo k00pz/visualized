@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Visual Blade ball [ Revamped ]",
-   LoadingTitle = "Visual Blade ball",
+   Name = "Mercury.net",
+   LoadingTitle = "Mercury.net Blade ball",
    LoadingSubtitle = "by Fsploit",
    ConfigurationSaving = {
       Enabled = true,
@@ -13,7 +13,7 @@ local Window = Rayfield:CreateWindow({
       Invite = "https://discord.com/invite/DcrzMGKwx2",
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Visual Keysystem",
       Subtitle = "Key System",
@@ -135,11 +135,9 @@ Camera.FieldOfView = FovNumber
 local Section = Tab:CreateSection("Info",true)
 
 local Label = Tab:CreateLabel("Pyxpixel Team",SectionParent)
-local Paragraph = Tab:CreateParagraph({Title = "Fsploit", Content = "Creator of the script",SectionParent})
-local Paragraph = Tab:CreateParagraph({Title = "Bl423 or Blaze", Content = "Owner of the script",SectionParent})
-local Paragraph = Tab:CreateParagraph({Title = "Vien", Content = "Owner of Wl and Leaf hub Development team",SectionParent})
-local Paragraph = Tab:CreateParagraph({Title = "Soulzx", Content = "Pyxpixel Development team and a new dev",SectionParent})
-local Paragraph = Tab:CreateParagraph({Title = "Robin1v1", Content = "Pyxpixel Development team",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Fsploit", Content = "Creator of the script/owner",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Bl423 or Blaze", Content = "Assistant",SectionParent})
+local Paragraph = Tab:CreateParagraph({Title = "Gear", Content = "Assistant ",SectionParent})
 
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
@@ -151,7 +149,7 @@ Notification:Notify(
 )
 wait(1)
 Notification:Notify(
-    {Title = "Project V!", Description = "Made by Fsploit & Pyxpixel team!"},
+    {Title = "Project V!", Description = "Made by Fsploit"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "image"},
     {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
 )
